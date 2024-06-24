@@ -6,6 +6,13 @@ from sklearn.neighbors import KNeighborsClassifier
 import pickle
 from PIL import Image
 from fastai.vision.all import *
+import platform
+import pathlib
+
+
+plt = platform.system()
+if plt != 'Windows':
+  pathlib.WindowsPath = pathlib.PosixPath
 
 # 加载数据和模型
 data = pd.read_excel('analysis/fruits.xlsx')
