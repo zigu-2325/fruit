@@ -1,3 +1,4 @@
 scikit-learn
 fastai
 openpyxl
+pandas
