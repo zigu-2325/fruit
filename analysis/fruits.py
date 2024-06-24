@@ -8,18 +8,18 @@ from PIL import Image
 from fastai.vision.all import *
 
 # 加载数据和模型
-data = pd.read_excel("C:\\Users\\86151\\Desktop\\analysis\\analysis\\fruits.xlsx")
+data = pd.read_excel("fruits.xlsx")
 scaler = StandardScaler()
 features = data[['Vitamin A', 'Vitamin C', 'Vitamin E', 'Dietary Fiber', 'Calcium', 'Magnesium', 'Iron']]
 labels = data['fruits']
 features_scaled = scaler.fit_transform(features)
 
 # 加载训练好的 KNN 模型
-with open("C:\\Users\\86151\\Desktop\\analysis\\analysis\\knn_model.pkl", 'rb') as f:
+with open("knn_model.pkl", 'rb') as f:
     knn = pickle.load(f)
 
 # 加载 CNN 模型
-learn = load_learner("C:\\Users\\86151\\Desktop\\analysis\\analysis\\export.pkl")
+learn = load_learner("export.pkl")
 
 # 设置页面标题和介绍
 st.title("基于营养素需求的果蔬推荐系统")
