@@ -2,4 +2,4 @@ scikit-learn
 fastai
 openpyxl
 pandas
-platformkdir
+platformkdirs
