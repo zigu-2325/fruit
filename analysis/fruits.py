@@ -15,11 +15,11 @@ labels = data['fruits']
 features_scaled = scaler.fit_transform(features)
 
 # 加载训练好的 KNN 模型
-with open('analysis\\knn_model.pkl', 'rb') as f:
+with open('knn_model.pkl', 'rb') as f:
     knn = pickle.load(f)
 
 # 加载 CNN 模型
-learn = load_learner('analysis\\export.pkl')
+learn = load_learner('export.pkl')
 
 # 设置页面标题和介绍
 st.title("基于营养素需求的果蔬推荐系统")
