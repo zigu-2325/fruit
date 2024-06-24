@@ -60,7 +60,7 @@ if st.button("获取推荐"):
     for fruit in recommended_fruits:
         st.write(fruit)
         # 假设图片存储在 "images/" 目录下，图片名称与水果名称相同
-        image_path = f"images/{fruit}.jpg"
+        image_path = f"{fruit}.jpg"
         show_image(image_path)
 
         # 使用 CNN 模型预测图片标签
